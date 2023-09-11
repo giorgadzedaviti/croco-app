@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import 'animate.css';
+@import "bootstrap-icons";
 
 main {
   width: 50%;

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ApiService} from "../api.service";
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-users',
@@ -9,7 +11,8 @@ import {ApiService} from "../api.service";
 export class UsersComponent implements OnInit {
   users: any[] = [];
 
-  constructor(private apiService: ApiService) {
+  constructor(private apiService: ApiService, private router: Router) {
+
   }
 
   ngOnInit(): void {
@@ -18,8 +21,7 @@ export class UsersComponent implements OnInit {
     });
   }
 
-  goToDetails(userId: number): void {
-    const userDetailUrl = `/user/${userId}`;
-    window.open(userDetailUrl, '_blank');
+  async goToDetails(userId: number) {
+    await this.router.navigate([`/user/${userId}`])
   }
 }

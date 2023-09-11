@@ -1,0 +1,16 @@
+<div (click)="goBack()" class="btn btn-secondary my-3">
+  <i class="bi bi-arrow-left-circle"></i>
+</div>
+<div *ngFor="let post of userPosts">
+  <div class="card mb-4 rounded-3 shadow-sm my-3">
+
+    <div class="card-header py-3">
+      <h4 class="my-0 fw-normal">{{post.title}} Details</h4>
+    </div>
+    <div class="card-body">
+      <ul class="list-unstyled mt-3 mb-4">
+        {{post.body}}
+      </ul>
+    </div>
+  </div>
+</div>

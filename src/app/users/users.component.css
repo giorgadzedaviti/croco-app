@@ -1,0 +1,8 @@
+.btn-success.mat-raised-button {
+  /* Add your button styles here */
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-success.mat-raised-button:hover {
+  transform: scale(1.05); /* Adjust the scaling factor as desired */
+}
